@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+Dashboard Task
+This project is a front-end application that uses React, Vite, and JSON Server for a mock backend. It provides a development environment with both the Vite development server and a mock REST API powered by json-server.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+React 18: A popular JavaScript library for building user interfaces.
+Vite: A fast build tool for modern web development.
+json-server: A mock REST API for development purposes.
+Material UI: A React UI framework for building modern, responsive designs.
+Prerequisites
+Before running the project, ensure you have the following installed:
 
-Currently, two official plugins are available:
+Node.js: Version 16 or higher.
+npm: Node's package manager (or yarn).
+Installation
+Clone the repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install the dependencies:
 
-## Expanding the ESLint configuration
+npm install
+Available Scripts
+npm run dev
+Runs both the Vite development server and json-server (mock API) concurrently:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The frontend will be served at http://localhost:3000.
+The mock API will be available at http://localhost:5000.
+npm run build
+Builds the project for production by first compiling the TypeScript files and then running the Vite build process.
 
-- Configure the top-level `parserOptions` property like this:
+npm run lint
+Runs ESLint to check the code for any issues or violations of style rules.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+npm run preview
+Runs the preview of the production build of the app (after using npm run build).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+npm run start:server
+Starts the json-server mock API on port 5000. This is used when you need to mock your backend for development.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Project Structure
+src/: Contains the source code for the React app.
+public/: Public assets (e.g., index.html, images).
+db.json: The file that contains mock data for the json-server API.
+vite.config.ts: Configuration file for Vite.
+tsconfig.json: TypeScript configuration file.
+eslint.json: ESLint configuration file.
+Development
+Start the development environment with the following command:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm run dev
+The application will be available at http://localhost:3000.
+
+The mock API will be available at http://localhost:5000.
+
+License
+This project is open-source and available under the MIT License.
+
+This README file should help you or other developers understand how to work with the project, the available scripts, and the setup process. Feel free to add more project-specific details as necessary.

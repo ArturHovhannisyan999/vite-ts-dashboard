@@ -1,0 +1,30 @@
+table {
+    min-width: 1220px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+tr {
+    transition: 0.2s ease-in-out;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+}
+
+tr:hover td {
+    text-shadow: 0 0 1px #222;
+}

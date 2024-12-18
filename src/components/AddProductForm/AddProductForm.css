@@ -1,0 +1,21 @@
+.add-product-form {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 3px;
+}
+
+.add-product-form__link {
+    color: #9c27b0;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+  
+.add-product-form__link:hover {
+text-decoration: underline;
+}
